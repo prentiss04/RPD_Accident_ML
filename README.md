@@ -21,7 +21,9 @@ While not all inputs are complete for each line item, there are nearly 50 featur
 
 ## Questions hope to answer with data
 There are 2 parts to this project:
+
 (i) Predict US Road Accident Severity using a Machine Learning model, where severity is defined as impact on traffic (delays)
+
 (ii) Create a US heatmap visualization based on the severity of the accidents
 
 ## Description of the data exploration phase of the project
