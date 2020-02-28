@@ -4,7 +4,9 @@
 US Road Accidents and their impact on Traffic (Delays)
 
 ## Reason topic selected / Inspiration
-US-Accidents can be used for numerous applications such as real-time accident prediction, studying accident hotspot locations, casualty analysis and extracting cause and effect rules to predict accidents, and studying the impact of precipitation or other environmental stimuli on accident occurrence. This Accident dataset is additionally attractive to us because, we are able to apply deep learning models to the data set due to its large number of features. 
+US-Accidents can be used for numerous applications such as real-time accident prediction, studying accident hotspot locations, casualty analysis and extracting cause and effect rules to predict accidents, and studying the impact of precipitation or other environmental stimuli on accident occurrence. 
+
+This Accident dataset is additionally attractive to us because, we are able to apply deep learning models to the data set due to its large number of features. 
 
 ## Description of data source
 This data is located on Kaggle and is a countrywide traffic accident dataset, which covers 49 states of the United States. This data has been collected in real-time, using multiple Traffic APIs. Currently, it contains data that is collected from February 2016 to December 2019 for the Contiguous United States.
