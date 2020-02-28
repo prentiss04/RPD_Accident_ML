@@ -1,0 +1,37 @@
+"Accident"
+-
+US_Accidents varchar pk
+Severity int
+Start_Lat varchar
+Start_Lng varchar
+Distance(mi) varchar
+Coordinates varchar fk
+Temperature(F) int
+Humidity(%) int
+Pressure(in) varchar
+Visibility(mi) varchar
+Wind_Direction varchar
+Wind_Speed(mph) varchar
+Precipitation(in) varchar
+Weather_Condition varchar
+Civil_Twilight varchar
+Amenity varchar
+Crossing varchar
+Junction varchar
+Railway varchar
+Station varchar
+Stop varchar
+Traffic_Signal varchar
+Start_Time varchar
+End_Time varchar
+Timezone varchar
+
+Location
+-
+Coordinates varchar pk fk - Accident.Coordinates
+Street varchar
+Side varchar
+City varchar
+County varchar
+State varchar
+Zipcode int
