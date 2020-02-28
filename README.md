@@ -1,7 +1,7 @@
 # RPD_Accident_ML
 
 ## Selected topic
-Using publicly available US Accident data from 2016-2019, we will use machine learning to create a model to predict the traffic severity as it pertains to an accident. 
+Using publicly available US Road Accident data from 2016-2019, we will use machine learning to create a model to predict the traffic severity as it pertains to an accident. 
 
 ## Reason topic selected 
 Initially we wanted to create a model that would predict crime type based on certain parameters. The issue was that there were too few inputs to expect that we would be able to achieve suitable accuracy. The Accident dataset was attractive because we can still apply machine learning models to the data set with considerably more inputs and a robust dataset to make development viable.  
