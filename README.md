@@ -1,7 +1,7 @@
 # RPD_Accident_ML
 
 ## Selected topic
-### US Road Accidents and their impact on Traffic (Delays)
+US Road Accidents and their impact on Traffic (Delays)
 
 ## Reason topic selected / Inspiration
 US-Accidents can be used for numerous applications such as real-time accident prediction, studying accident hotspot locations, casualty analysis and extracting cause and effect rules to predict accidents, and studying the impact of precipitation or other environmental stimuli on accident occurrence. 
