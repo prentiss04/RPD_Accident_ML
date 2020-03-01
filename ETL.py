@@ -5,13 +5,17 @@
 # Import dependencies
 import pandas as pd
 
+# Import SQL Load dependencies
+import psycopg2
+from config import db_password
+
 #####################################################################
 #########  DATA EXTRACTION  #########################################
 #####################################################################
 
 # Extract Kaggle Data
 
-file_dir = 'C:/Users/ruchi/Desktop/Berkley Extension Learning Docs/Final Project'
+file_dir = '.'
 kaggle_metadata = pd.read_csv(f'{file_dir}/US_Accidents_Dec19.tar.gz', 
                               compression='gzip', error_bad_lines=False, low_memory=False)
 
@@ -69,6 +73,9 @@ sorted_df.dtypes
 sorted_df['Start_Time'] = pd.to_datetime(sorted_df.Start_Time)
 sorted_df['End_Time'] = pd.to_datetime(sorted_df.End_Time)
 
+# Change Datatype for Severity from float to integer
+sorted_df['Severity'] = sorted_df['Severity'].astype(int)
+
 #########################   Create Highway and Coordinates Column   ######################
 
 
@@ -81,7 +88,7 @@ sorted_df.loc[sorted_df['Street'].str.contains('|'.join(searchfor), case=False),
 sorted_df["Highway"].fillna('N', inplace = True) 
 
 # Create Coordinates column
-sorted_df['Coordinates'] = sorted_df['Start_Lat'].map(str) + ', ' + sorted_df['Start_Lng'].map(str)
+sorted_df['Coordinates'] = sorted_df['Start_Lat'].map(str) + ':' + sorted_df['Start_Lng'].map(str)
 
 ##################  Prep Data and Create Dataframes for different SQL tables #############
 
@@ -89,7 +96,6 @@ sorted_df['Coordinates'] = sorted_df['Start_Lat'].map(str) + ', ' + sorted_df['S
 sorted_df = sorted_df.rename(index=str,columns={'US_Accidents_Dec19.csv': 'Accident_ID'})
 
 # Create Dataframes for Loading into SQL Tables 
-
 table1_df = sorted_df[['Accident_ID','Severity','Start_Time','End_Time',
                              'Start_Lat','Start_Lng','Coordinates', 'Distance(mi)', 'Side', 
                              'Temperature(F)','Humidity(%)','Pressure(in)',
@@ -100,18 +106,57 @@ table1_df = sorted_df[['Accident_ID','Severity','Start_Time','End_Time',
 table2_df = sorted_df[['Coordinates', 'Street','City','County','State','Zipcode',
                        'Timezone', 'Highway']]
 
-# Drop DUPLICATE rows from Table 2
-table2_df.drop_duplicates(inplace=True)
+# Drop duplicate columns from table 2 dataframe
+table2_df.drop_duplicates(subset=['Coordinates'], inplace=True)
+
+# Rename dataframe columns to match the table column names which are all in lower case
+table2_df.columns = map(str.lower, table2_df.columns)
+
+# Rename dataframe columns to match the table column names
+table1_df = table1_df.rename(index=str,columns={'Distance(mi)':'distance', 
+                             'Temperature(F)':'temperature',
+                             'Humidity(%)':'humidity',
+                             'Pressure(in)':'pressure',
+                             'Visibility(mi)':'visibility',
+                             'Wind_Speed(mph)':'wind_speed',
+                             'Precipitation(in)':'precipitation',
+                             })
+table1_df.columns = map(str.lower, table1_df.columns)
 
 # Set Index
-table1_df.set_index('Accident_ID', inplace=True)
-table2_df.set_index('Coordinates', inplace=True)
+table1_df.set_index('accident_id', inplace=True)
+table2_df.set_index('coordinates', inplace=True)
+
+# Since very large dataset Create CSVs to load data into Postgres SQL tables
+table1_df.to_csv('table1.csv', sep='|')
+table2_df.to_csv('table2.csv',sep='|')
 
 ########################################################################################
-##############  LOAD  ##################################################################
+##############  LOAD  DATA to Postgres SQL Tables on AWS ###############################
 ########################################################################################
-sorted_df.columns
-len(sorted_df)
+
+# Create connection string and engine
+conn = psycopg2.connect(
+    host="accident-viz.c4cdhyeva5ut.us-east-1.rds.amazonaws.com", 
+    port='5432', 
+    dbname="Accident-ETL", 
+    user="postgres", 
+    password=db_password
+)
+cur = conn.cursor()
+
+# Load data from table2_df into the accident_location table
+with open('table2.csv', 'r') as f:
+    next(f) # Skip the header row.
+    cur.copy_from(f, 'accident_location', sep='|')
+    conn.commit()
+
+# Load data from table1_df into the accident table
+with open('table1.csv', 'r') as f:
+    next(f) # Skip the header row.
+    cur.copy_from(f, 'accidents', sep='|')
+    conn.commit()
+
 
 ##############  THE END  ##################################################################
-########################################################################################
+###########################################################################################
