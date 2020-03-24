@@ -1,8 +1,9 @@
-# Install Java, Spark, and Findspark
+#Install Java, Spark, and Findspark
 !apt-get install openjdk-8-jdk-headless -qq > /dev/null
 !wget -q http://www-us.apache.org/dist/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz
 !tar xf spark-2.4.5-bin-hadoop2.7.tgz
 !pip install -q findspark
+
 # Set Environment Variables
 import os
 os.environ["JAVA_HOME"] = "/usr/lib/jvm/java-8-openjdk-amd64"
@@ -17,9 +18,10 @@ spark = SparkSession.builder.appName("BigDataHW").config("spark.driver.extraClas
 # Configure settings for RDS
 #mode = "append"
 from config import db_password
+
 jdbc_url="jdbc:postgresql://accident-viz.c4cdhyeva5ut.us-east-1.rds.amazonaws.com:5432/Accident-ETL"
 config = {"user":"postgres",
-          "password": {db_password},
+          "password": db_password,
           "driver":"org.postgresql.Driver"}
 
 # Read in dataset from SQL with join between accident table and accident_location table
@@ -112,28 +114,15 @@ X_df.head()
 # Manual preprocessing to group weather_classifications based on personal judgement into ten categories.
 # change to read.csv (for .py)
 
-#from google.colab import files
-
 weather_unique = X_df['weather_condition'].value_counts().rename_axis('unique_values').reset_index(name='counts')
-weather_unique.to_csv('weather_condition.csv')
-
-weather_unique.to_csv(r'C:/Users/prent/DSBC/Final_Project/RPD_Accident_ML/weather_condition.csv', index = False, header = True)
+#weather_unique.to_csv('weather_condition.csv')
+weather_unique.to_csv(r'./weather_condition.csv', index = False, header = True)
 
 # Read in weather_condition_categories.csv file (just the weather_condition_categories tab not the pivot table tab)
 
 # Create DF of unique weather conditions and counts, write to csv for categorization
-
-#from google.colab import files
-uploaded = files.upload()
-
 # Read sorted weather_conditions_categories from folder
-file_dir = 'C:/Users/prent/DSBC/Final_Project/RPD_Accident_ML'
-with open(f'{file_dir}/weather_condition_categories.csv', mode='r') as file:
-     conditions_cat_df = json.load(file)
-#delete the following block when read block is working
-
-import io
-#conditions_cat_df = pd.read_csv(io.BytesIO(uploaded['weather_condition_categories.csv']))
+conditions_cat_df = pd.read_csv('./weather_condition_categories.csv')
 
 X_df = pd.merge(X_df, conditions_cat_df, how="left", left_on="weather_condition", right_on="unique_values")
 X_df.head()
