@@ -26,21 +26,26 @@ There are 2 parts to this project:
 
 (ii) Create a US heatmap visualization based on the severity of the accidents
 
-## Description of the data exploration phase of the project
+## Description of the data exploration phase of the project - RS
 
 
-## Decription of the analysis phase of the project
+## Decription of the analysis phase of the project - PPD
 
 
-## Technologies, languages, tools, and algorithms used throughout the project
+## Technologies, languages, tools, and algorithms used throughout the project - RS
 
 
-## Result of analysis
+## Result of analysis - PPD
 
 
-## Recommendation for future analysis
+## Recommendation for future analysis - PPD/RS
 
 
-## Anything the team would have done differently
+## Anything the team would have done differently - PPD/RS
+
+## Notes
+ add link the google preso
+ add link to tableau file
+ add ML txt file (link and commit)
 
 
