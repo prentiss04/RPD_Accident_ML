@@ -1,0 +1,19 @@
+Technical Requirements to run codes and view analysis:
+
+Operating System: Windows
+Programming language and package: Anaconda, Jupyter Notebook and Google Colab
+
+ETL.py
+1.) psycopg2 installed to Connect to PostgreSQL database from Python
+2.) Pandas library for Python
+
+
+Machine_Learning.py
+1.) Google Colab
+2.) 
+
+
+
+Tableau Analysis: Web Browser
+
+Google Slides: Google Account
