@@ -1,8 +1,0 @@
-Coordinates,object,Primary Key
-Street,object,
-City,object,
-County,object,
-State,object,
-Zipcode,object,
-Timezone,object,
-Highway,object,
