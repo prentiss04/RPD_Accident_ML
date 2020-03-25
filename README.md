@@ -52,6 +52,7 @@ One surprise from the analysis is that the weather conditions have very little b
 
 
 ## Recommendation for future analysis - PPD/RS
+note: 5 PM weekday is very different from 5 PM weekend but we don't separate that out
 
 
 ## Anything the team would have done differently - PPD/RS
