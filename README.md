@@ -35,7 +35,7 @@ There are 2 parts to this project:
 ## Technologies, languages, tools, and algorithms used throughout the project - RS
 
 
-## Result of analysis - PPD
+## Result of analysis - PPD (bulleted key takeaways from each)
 From a technical level we found that the Decision Tree Classifier (DTC) was the best predictor of accuracy (81%) with our Neural Network (NN) model a close second (75%). With more experience using neural networks and the vast number of variables, it’s reasonable to expect that NN performance would exceed DTC. 
 
 With two of the four severity classification scores (Level 2 & 3) accounting for >80% of the sample data, it stands to reason that most of the models we tested performed reasonably well predicting those severity levels. One issue at hand is that Level 4 accidents have the most severe traffic response, but only account for 2% of accidents. With such a small accident count in a model that is performing very well with much more benign accidents, it’s not unexpected, though disappointing, that we couldn’t get better results in the accidents that likely have the most catastrophic results.  
