@@ -29,7 +29,7 @@ There are 2 parts to this project:
 ## Description of the data exploration phase of the project - RS
 
 
-## Decription of the analysis phase of the project - PPD
+## Description of the analysis phase of the project - PPD
 
 
 ## Technologies, languages, tools, and algorithms used throughout the project - RS
