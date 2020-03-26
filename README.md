@@ -32,7 +32,7 @@ More details about the dataset can be found at Kaggle: https://www.kaggle.com/so
 ## Description of the data exploration phase of the project
 The data was explored for relevant features, duplicates, excessive null values etc. 
 
-![Image description]https://github.com/prentiss04/RPD_Accident_ML/blob/Master/Data_Exploration.png
+!https://github.com/prentiss04/RPD_Accident_ML/blob/Master/Data_Exploration.png
 
 And following transformation was performed, on the select data columns extracted, for use in the project:
 - Handling of Null values: such as replaced nulls with 0 for precipitation, dropped columns with significant null values, dropped rows with null values
