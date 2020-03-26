@@ -32,7 +32,11 @@ There are 2 parts to this project:
 ## Description of the analysis phase of the project - PPD
 
 
-## Technologies, languages, tools, and algorithms used throughout the project - RS
+## Technologies, languages, tools, and algorithms used throughout the project
+- Database Storage: AWS Postgres RDS
+- Program to Extract, Transform and Load and Query data: Pyspark and Psycopg2 for Postgres connectivity
+- Python Machine Learning algorithms for classification: Oversampling, Decision Tree Classifier, Tested and rejected Neural Network and Logistic Regression
+- Tableau for Analysis and Visualization
 
 
 ## Result of analysis - PPD (bulleted key takeaways from each)
