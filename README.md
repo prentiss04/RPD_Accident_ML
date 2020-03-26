@@ -29,8 +29,15 @@ More details about the dataset can be found at Kaggle: https://www.kaggle.com/so
 
 3.) Can an Early Warning System be developed to avoid traffic hotspots based on certain conditions such as weather, time of day
 
-## Description of the data exploration phase of the project - RS
-
+## Description of the data exploration phase of the project
+The data was explored for relevant features, duplicates, excessive null values etc. and following transformation was performed, on the select data columns extracted, for use in the project:
+- Handling of Null values: such as replaced nulls with 0 for precipitation, dropped columns with significant null values, dropped rows with null values
+- Drop duplicate rows: since accidents were collected from multiple sources there were duplicates
+- Transform/Create columns
+     - Extract 5 digit zipcode from postal zipcodes
+     - Create additional columns such as Highway
+- Correct column datatypes such as converting start date and time column to datetime type
+- Rename columns to match the database table column names
 
 ## Description of the analysis phase of the project - PPD
 
