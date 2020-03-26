@@ -9,11 +9,15 @@ US-Accidents can be used for numerous applications such as real-time accident pr
 This Accident dataset is additionally attractive to us because, we are able to apply deep learning models to the data set due to its large number of features. 
 
 ## Description of data source
-This data is located on Kaggle and is a countrywide traffic accident dataset, which covers 49 states of the United States. This data has been collected in real-time, using multiple Traffic APIs. Currently, it contains data that is collected from February 2016 to December 2019 for the Contiguous United States.
-
-These APIs broadcast traffic data captured by a variety of entities, such as the US and state departments of transportation, law enforcement agencies, traffic cameras, and traffic sensors within the road-networks. 
+### - Source: Kaggle
+### - Datasize: ~3M entries
+### - Time period: February 2016 to December 2019
+### - Scope: 49 US states 
+####  (No Hawaii and Alaska)
 
 While not all inputs are complete for each line item, there are nearly 50 features presented. Some of these are unsuitable for our project while others lack enough information to be worth including. Prior to cleaning and transforming data, there are approximately 3M entries.  
+
+More details about the dataset can be found at Kaggle: https://www.kaggle.com/sobhanmoosavi/us-accidents
 
 #### Acknowledgements for the dataset as required by the source [Please cite the following papers if you use this dataset]: 
 - Moosavi, Sobhan, Mohammad Hossein Samavatian, Srinivasan Parthasarathy, and Rajiv Ramnath. “A Countrywide Traffic Accident Dataset.”, 2019.
@@ -22,10 +26,8 @@ While not all inputs are complete for each line item, there are nearly 50 featur
 ## Questions hope to answer with data
 
 1.) Can we accurately predict accident severity based on certain features?
-
 2.) What are the key features that cause accidents with severe traffic delays?
-
-3.) Can an Early Warning System be developed to avoid traffic hotspots based on certain conditions such as weather, time of day etc.
+3.) Can an Early Warning System be developed to avoid traffic hotspots based on certain conditions such as weather, time of day
 
 ## Description of the data exploration phase of the project - RS
 
