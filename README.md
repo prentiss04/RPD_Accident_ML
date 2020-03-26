@@ -86,13 +86,15 @@ One surprise from the analysis is that the weather conditions have very little b
 
 
 ## Recommendation for future analysis - PPD/RS
-note: 5 PM weekday is very different from 5 PM weekend but we don't separate that out
-Consider other targets such as financial cost of accident or injuries/fatalities. 
-See additional features such as driver age, experience, speed, cars involved. 
+For future analysis, including, where possible, other features of accidents such as driver age and experience, number of vehicles involved, speed of initiating driver and possible impairments would be our next step. 
 
+Furthermore, as the dataset is very large, we'd want to see if there are other ways to streamline the analysis. This could be done by looking at features that offer little to no benefit to the model or consider possible outliers that may be creating more noise than advantate. 
 
+As it stands, we are looking at the traffic severity as the target. It would be interesting to see how the data correlates to other targets (not currently provided) such as predicting financial cost of accidents or accidents/fatalities. 
 
 ## Anything the team would have done differently - PPD/RS
+While time of day and day of week were both features considered during the analysis, we overlooked the creation of a weekday/weekend. We expect that this would be similar to the the Civil_twilight feature where most high severity accidents would occur during the weekdays when traffic is the highest during commute hours. This may have helped increase the models in the Level 4 accidents. 
+
 We used Accuracy for the arbiter for machine learning model success with Recall being the second metric we focused on. Regardless of model selection, the Level 4 (most severe) accidents were the most difficult to predict with ~50% recall & precision the maximum achievement. 
 
 With the goal of improving Level 4 metrics, we would focus energies on determining which features have little influence in accurately predicting accident severity and drop them from the pre-split analysis dataframe. 
