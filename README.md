@@ -6,8 +6,6 @@ US Road Accidents and their impact on Traffic (Delays)
 ## Reason topic selected / Inspiration
 US-Accidents can be used for numerous applications such as real-time accident prediction, studying accident hotspot locations, casualty analysis and extracting cause and effect rules to predict accidents, and studying the impact of precipitation or other environmental stimuli on accident occurrence. 
 
-This Accident dataset is additionally attractive to us because, we are able to apply deep learning models to the data set due to its large number of features. 
-
 ## Description of data source
 ### - Source: Kaggle
 ### - Datasize: ~3M entries
@@ -26,7 +24,9 @@ More details about the dataset can be found at Kaggle: https://www.kaggle.com/so
 ## Questions hope to answer with data
 
 1.) Can we accurately predict accident severity based on certain features?
+
 2.) What are the key features that cause accidents with severe traffic delays?
+
 3.) Can an Early Warning System be developed to avoid traffic hotspots based on certain conditions such as weather, time of day
 
 ## Description of the data exploration phase of the project - RS
