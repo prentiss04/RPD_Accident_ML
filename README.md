@@ -20,11 +20,12 @@ While not all inputs are complete for each line item, there are nearly 50 featur
 - Moosavi, Sobhan, Mohammad Hossein Samavatian, Srinivasan Parthasarathy, Radu Teodorescu, and Rajiv Ramnath. "Accident Risk Prediction based on Heterogeneous Sparse Data: New Dataset and Insights." In proceedings of the 27th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems, ACM, 2019. 
 
 ## Questions hope to answer with data
-There are 2 parts to this project:
 
-(i) Predict US Road Accident Severity using a Machine Learning model, where severity is defined as impact on traffic (delays)
+1.) Can we accurately predict accident severity based on certain features?
 
-(ii) Create a US heatmap visualization based on the severity of the accidents
+2.) What are the key features that cause accidents with severe traffic delays?
+
+3.) Can an Early Warning System be developed to avoid traffic hotspots based on certain conditions such as weather, time of day etc.
 
 ## Description of the data exploration phase of the project - RS
 
@@ -34,7 +35,7 @@ There are 2 parts to this project:
 
 ## Technologies, languages, tools, and algorithms used throughout the project
 - Database Storage: AWS Postgres RDS
-- Program to Extract, Transform and Load and Query data: Pyspark and Psycopg2 for Postgres connectivity
+- Program to Extract, Transform, Load and Query data: Pyspark and Psycopg2 for Postgres connectivity
 - Python Machine Learning algorithms for classification: Oversampling, Decision Tree Classifier, Tested and rejected Neural Network and Logistic Regression
 - Tableau for Analysis and Visualization
 
