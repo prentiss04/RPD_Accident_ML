@@ -43,9 +43,9 @@ And following transformation was performed, on the select data columns extracted
 - Correct column datatypes such as converting start date and time column to datetime type
 - Rename columns to match the database table column names
 
-## Description of the analysis phase of the project - PPD
+## Description of the analysis phase of the project
 Using the tools listed below, we used open source automobile accident information to create several machine learning models to predict post-accident traffic severity. We leveraged Logistic Regression, Oversampling, Decision Tree Classifier and Neural Networks to build models of varying accuracy. 
-Users should expect to have current versions of Python, TensorFlow, PySpark xxxxx   loaded to successfully run files XXX & YYY
+Users should have current versions of Python, TensorFlow, PySpark loaded to successfully run files ETL.py & accidents.py.
 
 Tools:
 - Postgres for data storage
@@ -54,7 +54,6 @@ Tools:
 - Github, Google Colab & Docs for collaboration
 - Python, MS Excel, pandas for preprocessing 
 
-
 ## Technologies, languages, tools, and algorithms used throughout the project
 - Database Storage: AWS Postgres RDS
 - Program to Extract, Transform, Load and Query data: Pyspark and Psycopg2 for Postgres connectivity
@@ -62,7 +61,7 @@ Tools:
 - Tableau for Analysis and Visualization
 
 
-## Result of analysis - PPD (bulleted key takeaways from each)
+## Result of analysis
 **Decision Tree Classifier outperformed other models tested**<br />
 From a technical level we found that the Decision Tree Classifier (DTC) was the best predictor of accuracy (81%) with our Neural Network (NN) model a close second (75%). With more experience using neural networks and the vast number of variables, it’s reasonable to expect that NN performance would exceed DTC. 
 
@@ -85,14 +84,14 @@ Time in Seconds (i.e. time of day) was the 5th most influential factor. Tying ba
 One surprise from the analysis is that the weather conditions have very little bearing on accident severity. The reasons for this could be several, some of them data while others are likely human behavior. 1) There are relatively few accidents recorded when conditions are the most dangerous so the models are likely not “seeing” those events as influential to traffic severity. 2) People tend to not drive, or drive more cautiously, when conditions  are poor. As a result, when accidents do occur, fewer people are on the road leading to shorter delays. 
 
 
-## Recommendation for future analysis - PPD/RS
+## Recommendation for future analysis
 For future analysis, including, where possible, other features of accidents such as driver age and experience, number of vehicles involved, speed of initiating driver and possible impairments would be our next step. 
 
 Furthermore, as the dataset is very large, we'd want to see if there are other ways to streamline the analysis. This could be done by looking at features that offer little to no benefit to the model or consider possible outliers that may be creating more noise than advantate. 
 
 As it stands, we are looking at the traffic severity as the target. It would be interesting to see how the data correlates to other targets (not currently provided) such as predicting financial cost of accidents or accidents/fatalities. 
 
-## Anything the team would have done differently - PPD/RS
+## Anything the team would have done differently
 While time of day and day of week were both features considered during the analysis, we overlooked the creation of a weekday/weekend. We expect that this would be similar to the the Civil_twilight feature where most high severity accidents would occur during the weekdays when traffic is the highest during commute hours. This may have helped increase the models in the Level 4 accidents. 
 
 We used Accuracy for the arbiter for machine learning model success with Recall being the second metric we focused on. Regardless of model selection, the Level 4 (most severe) accidents were the most difficult to predict with ~50% recall & precision the maximum achievement. 
@@ -106,5 +105,3 @@ Furthermore, we barely scratched the surface of the world of neural network mode
  Presentation: https://docs.google.com/presentation/d/1c3YTJ279FInRyDMTLCzxcWQR16KaX0t2oJ0nIwjrDpo/edit?usp=sharing,<br />
  Visualization: https://public.tableau.com/profile/ruchi7973#!/vizhome/FinalProject-USRoadAccidents/Storyboard<br />
  add ML txt file (link and commit)
-
-
