@@ -44,6 +44,15 @@ And following transformation was performed, on the select data columns extracted
 - Rename columns to match the database table column names
 
 ## Description of the analysis phase of the project - PPD
+Using the tools listed below, we used open source automobile accident information to create several machine learning models to predict post-accident traffic severity. We leveraged Logistic Regression, Oversampling, Decision Tree Classifier and Neural Networks to build models of varying accuracy. 
+Users should expect to have current versions of Python, TensorFlow, PySpark xxxxx   loaded to successfully run files XXX & YYY
+
+Tools:
+- Postgres for data storage
+- PySpark for data reading/reading
+- Sklearn, TensorFlow & Keras for machine learning
+- Github, Google Colab & Docs for collaboration
+- Python, MS Excel, pandas for preprocessing 
 
 
 ## Technologies, languages, tools, and algorithms used throughout the project
