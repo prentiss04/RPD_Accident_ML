@@ -19,7 +19,7 @@
     * Superfluous and redundant columns dropped
 
 ## Description of feature engineering and the feature selection, including the team's decision-making process
-    ** Severity is the feature we deemed as the target as it is used to describe the impact the accident had on traffic. All other traffic features are inputs to determine what was the outcome.
+    * Severity is the feature we deemed as the target as it is used to describe the impact the accident had on traffic. All other traffic features are inputs to determine what was the outcome.
         * The team exercised judgement to decide which features were unlikely to aid in the modeling of the data.
         * While the precise date did not seem to add value in predicting the extent of traffic delay, the day of week and time seemed to provide considerable value.
         * Furthermore, the starting date provided context but the ending date does not except to determine the duration of the actual accident.
@@ -56,8 +56,7 @@
         * The DNN achieved similar performance scores to the DTC but with slightly lower accuracy (75% vs 81%) with similar precision and recall scores.
         * Ultimately, with more experience, data feature improvements and more knowledge around model parameter choice we expect that a DNN model will exceed DTC performance. In the end, a model needs to do a better job predicting the most severe accidents to be viable.
 
-## Description of how model was trained (or retrained, if they are using an
-existing model)
+## Description of how model was trained (or retrained, if they are using anexisting model)
     * After the data was scaled, data was trained using sklearn.preprocessing. In an effort to remain consistent, data was not retrained through the different model development.
     * With the exception of the Oversampling instance, all models used the same training and test sets.
     * In the Oversampling case, the original training set was resampled to create an equal-sized case for all four severity levels.
