@@ -104,5 +104,4 @@ Furthermore, we barely scratched the surface of the world of neural network mode
 ## Notes
  Presentation: https://docs.google.com/presentation/d/1c3YTJ279FInRyDMTLCzxcWQR16KaX0t2oJ0nIwjrDpo/edit?usp=sharing,<br />
  Visualization: https://public.tableau.com/profile/ruchi7973#!/vizhome/FinalProject-USRoadAccidents/Storyboard<br />
- Machine Learning Observations: https://docs.google.com/document/d/1oLN1u9kHJTzFKctZW1csRmOUX3zS_cXikEgI1IjUg3c/edit
- Machine Learning Observations: https://github.com/prentiss04/RPD_Accident_ML/blob/Master/Preprocessing_ML.md
+  Machine Learning Observations: https://github.com/prentiss04/RPD_Accident_ML/blob/Master/Preprocessing_ML.md
