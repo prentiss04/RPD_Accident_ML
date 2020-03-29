@@ -30,7 +30,8 @@ More details about the dataset can be found at Kaggle: https://www.kaggle.com/so
 3.) Can an Early Warning System be developed to avoid traffic hotspots based on certain conditions such as weather, time of day
 
 ## Description of the data exploration phase of the project
-The data was explored for relevant features, duplicates, excessive null values etc. 
+The data was explored for relevant features, duplicates, excessive null values etc.<br />
+ETL: https://github.com/prentiss04/RPD_Accident_ML/blob/Master/ETL.py
 
 ![Data Exploration Sample image](https://github.com/prentiss04/RPD_Accident_ML/blob/Master/Data_Exploration.png)
 
@@ -44,6 +45,9 @@ And following transformation was performed, on the select data columns extracted
 - Rename columns to match the database table column names
 
 ## Description of the analysis phase of the project
+The data was preprocessed prior to machine learning modeling.<br />
+Preprocessing & Machine Learning: https://github.com/prentiss04/RPD_Accident_ML/blob/Master/accidents.py
+
 Using the tools listed below, we used open source automobile accident information to create several machine learning models to predict post-accident traffic severity. We leveraged Logistic Regression, Oversampling, Decision Tree Classifier and Neural Networks to build models of varying accuracy. 
 Users should have current versions of Python, TensorFlow, PySpark loaded to successfully run files ETL.py & accidents.py.
 
